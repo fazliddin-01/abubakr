@@ -11,26 +11,56 @@
     padding: 0 15px;
 }
 
-.card.active {
-    background-color: blue;
-    color: black;
-    transition: 0.5s;
-}
-
 .box {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 50px; */
+
+    display: flex;
+    gap: 30px
+    ;
 }
 
 .card {
-    background-color: chartreuse;
-    height: 220px;
-    transition: 2.5s;
+    width: calc(200%/1);
+    height: 500px;
+    cursor: pointer;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
 }
 
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.title {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Arial;
+    z-index: -99;
+    opacity: 0;
+    transition: 1s;
+}
+
+.card.active {
+    width: 250%;
+}
+
+.card.active .title {
+  z-index: 1;
+  opacity: 1;
+}
+/* 
 .card.active  {
     width: 110%;
-}
+} */
 
