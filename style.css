@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.card.active {
+    background-color: blue;
+    color: black;
+    transition: 0.5s;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: chartreuse;
+    height: 220px;
+    transition: 2.5s;
+}
+
+.card.active  {
+    width: 110%;
+}
+
